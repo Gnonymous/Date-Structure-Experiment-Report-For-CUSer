@@ -1,6 +1,6 @@
 # Data Structure Experiment Report
 
-## ==Experiment 1--quick sort==
+## Experiment 1--quick sort
 
 > 该实验报告将从一下几个方面进行总结
 >

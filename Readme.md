@@ -59,7 +59,7 @@ int partition(int* a,int low,int high){
 
 * 对于枢纽值的确定出现错误
 
-```mistake
+```c
 int partition(int* a,int low,int high){
     int pivotkey=a[i];//这里出现错误
 这里我在设定枢纽值的时候，本意是想将每段数组的第一个数作为枢纽，但是出现了这个小错误，因为大数组a已经被分为好几个小数组，而pivot应该是每个小数组的第一个值。所以，改正应为
@@ -68,7 +68,7 @@ int partition(int* a,int low,int high){
 
 * 对于partition函数循环结束条件出现错误
 
-~~~mistake
+~~~c
 while(low<high){
         while(a[high]>=pivotkey){//这里忘记判断基本条件low<high，下同
             high--;
@@ -85,7 +85,7 @@ while(low<high){
 
 * 对于枢纽值的处理，分段数组的首元素为a[low];
 
-~~~amended
+~~~c
 int partition(int* a,int low,int high){
     int pivotkey=a[i];//这里出现错误
 这里我在设定枢纽值的时候，本意是想将每段数组的第一个数作为枢纽，但是出现了这个小错误，因为大数组a已经被分为好几个小数组，而pivot应该是每个小数组的第一个值。所以，改正应为
@@ -94,7 +94,7 @@ int partition(int* a,int low,int high){
 
 * 对于while循环我们要记住条件的判定，尤其是嵌套循环，尽管外循环进行了限制，但是内循环仍有可能越界。
 
-~~~amended
+~~~c
  while(low<high){
         while(low<high&&a[high]>=pivotkey){//加入基本条件判断low<high
             high--;
